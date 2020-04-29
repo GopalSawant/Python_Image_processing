@@ -1,0 +1,297 @@
+#Operator Precedence
+
+()
+**
+*/
++-
+
+
+
+#Complex operation
+
+Binary number
+bin(5)= 0b 101
+print(int('0b101',2))
+
+long_string='''
+hey
+buddy
+how u doing ?
+''' 
+
+
+#Formated String
+name="Gopal"
+age=25
+address="Pune"
+print(f'Hi {name}. you are {age} and you live {address}, right? ')
+print('Hi {}. you are {} and you live in {}'.format(name,age,address))
+print('Hi {}. you are {} and you live in {}'.format(name,55,address))
+print('Hi {2}. you are {1} and you live in {0}'.format(name,age,address))
+
+info='Hi Gopal. you are 25 and you live in Pune'
+print(info[6])
+print(info[:])
+print(info[0:2])
+info='0123456789'
+print(info[0::2])
+print(info[-7:-1:2])
+
+#Bulit in Function
+len()
+name='GopalSawant'
+print((name).upper())
+print(name.capitalize())
+print(name.lower())
+print(name.find('Saw'))
+print(name.replace('Sawant','Gopya'))
+
+
+#List
+list.append()
+list.pop() //remove from end of list
+list are mutable
+
+#List
+
+newList=oldlist  // assign the addresss not the content
+newLi=oldlist[:] //assign the content
+
+
+list.append()
+list=[1,2,3,4,5,]
+list.append(6)
+list.insert(1,8)
+list.extend("100")
+print(list)
+list.pop(8)
+list.remove('0')
+list.clear()
+print(list)
+
+list.index()   	//will return the index of item from list
+list.count()	//count the occurance of item in list
+
+--Method and function defference ?
+
+list.sort()
+list.reverse()
+range(1,100)
+
+string join
+
+#List Patterns
+
+print(list(range(1,100)))
+
+
+#List unpacking
+a,b,c, *other,d=[1,2,3,4,5,6,7,8]
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+None=null
+
+
+#Dictionary- unordered(not in ordered in memmory) key value pair
+{
+// dictionary
+}
+key is string value
+
+List may has multiple dictionary
+
+myList=[
+{
+     'a':[1,2,3,4],
+    'b':"hello",
+    'c':True,
+    'd':40.2
+
+    },
+{
+     'a':[10000],
+    'b':"hello",
+    'c':True,
+    'd':40.2
+
+    }  
+
+    ]
+
+print(myList[0]['a'][0])
+
+#Dictionary-and List:
+Dictionary-not sorted/ no order
+List- ordered 
+
+dictionary keys are immutable...
+dictionary key has to be unique otherwise it will override the values.
+
+dictionary.get("")
+dictionary.items() //retur in form of tuples
+dictionary.clear()
+dictionary.copy()
+dictionary.pop("") // return tthe value which gonna be remove
+
+dictionary.popitem()  //pop random key value
+dictionary.update({'key':value} //update old if exist otherwise with new
+
+dictionary.item() //return key,value pair in form of tuple
+
+for key,value in dictionary.items:
+	print(key, value)
+
+dictionary.key()  //will just return the keys in dictionary
+dictionary.values() // return values 
+dictionary 			// will return the keys
+
+#Tuple
+- immutable list
+-'tuple' object does not support item assignment
+
+myTuple=(1,2,3,4,5,6,7)
+myTuple[0]=8 //not allowed assignemnet
+
+print(myTuple)
+
+dictionary={
+'key1':'value1',
+'Hey':'Hello',
+(9,0,'tuple'):"tuples are immutable"    
+    }
+
+print(dictionary)
+print(dictionary.items())// retuns item in foorm of tuples  
+
+print(myTuple[1:3])
+x= myTuple[0]print(x)
+
+z,y,x,*other=myTuple
+print(x)
+print(other)
+
+print(myTuple.count(4))
+print(myTuple.index(4))
+
+
+#SET
+
+unorderd collection of unique objects,
+it does not have key  value pair
+
+myset={1,2,3,4,5,5}
+print(myset) #return only unique value
+myset.add(100) #it will get add it is unique item
+myset.add(4) # will not get add in the set
+print(myset)
+#print(myset[0]) # 'set' object is not subscriptable, cn't use index
+print(1 in myset) #return TRUE as 1 values  is present in set
+print(list(myset)) #output in form of list
+
+
+##all values in pythons are considered to be truethy except it is falsy value
+
+None
+0, 0.0,  fraction
+empty string, set ,dict, bytes, list, range
+
+print(bool(None)) // will return False
+variable1="anything" // always retuen true
+variable2= 64646646  //always returns true
+
+
+#Ternary Operator
+     #condition_if_true if condition else condition_if_else
+
+is_friend=True
+can_message="Message allowed " if is_friend else "Message not allowed"
+
+print(can_message)
+
+
+#Short Circuiting
+ or,and oprator // code skipping when one condition result come
+ 
+#Logical Operator
+
+
+#enumerate -return index counter of item you are looping through
+
+for i,char in enumerate(range(100)):
+    if char==50:
+        print(f"index of 50 is {i}")
+		
+		
+#####Functions######
+
+def  //define function
+
+#parameters
+def greet(name="Darth vader", emoji="Angry"):
+    print(f"Hello {name}, {emoji} !!!")
+
+#arguments
+greet("sawant", "smile")
+
+#keyword argument
+greet(emoji="smile",name="Gopal")
+    
+#will call default parameter
+greet()
+greet("Yoda")
+
+
+####################################
+Methods vs Function
+
+##Functions-
+list()
+print()
+max()
+min()
+input()
+def()
+
+##Method-
+.(dot)Method()
+
+'hellooo'.capitalize()
+
+
+##Arguments
+# *args  **kwargs
+
+local prameter, *args, default param, **kwargs
+----------------------------
+def sumOfArguments(*args):
+    return sum(args)
+
+print(sumOfArguments(1,2,3,4,5,6,7,8,9))
+
+----------------------
+
+ #*args **kwargs
+def sumOfArguments(*args, **kwargs):
+    print(kwargs)
+    return sum(args)+sum(kwargs.values())
+
+
+print(sumOfArguments(1,2,3,4,5,6,7,8,9, num1=45 , num2=10))
+
+
+
+######OOPS###########
+class own data type
+
+@classmethod vs @staticmethod
+The most obvious thing between these decorators is their ability to create static methods within a class. These types of methods can be called on uninstantiated class objects, much like classes using the static keyword in Java.
+
+There is really only one difference between these two method decorators, but it's a major one. You probably noticed in the sections above that @classmethod methods have a cls parameter sent to their methods, while @staticmethod methods do not.
+
+#####Encapsulation###
+Binding of data and Functions
+attribute and 
